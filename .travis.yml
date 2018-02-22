@@ -21,9 +21,9 @@ notifications:
 language: c
 install:
 - cd $TRAVIS_BUILD_DIR
-- git clone https://github.com/libremesh/lime-sdk.git sdk || true
+- git clone https://github.com/robisys/lime-sdk.git sdk || true
 - cd sdk
-- sed 's|https://github.com/libremesh/lime-packages.git.*|'$TRAVIS_BUILD_DIR'|g' feeds.conf.default > feeds.conf.default.local
+- sed 's|https://github.com/robisys/lime-packages.git.*|'$TRAVIS_BUILD_DIR'|g' feeds.conf.default > feeds.conf.default.local
 - ./cooker -f -d x86/generic
 script:
 - cd $TRAVIS_BUILD_DIR/sdk
